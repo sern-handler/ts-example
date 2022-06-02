@@ -1,4 +1,4 @@
-import { basecommand } from "./basecommand";
+import { basecommand } from "../../tools/basecommand/text";
 
 export default basecommand(
   [],
