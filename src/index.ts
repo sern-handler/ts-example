@@ -21,4 +21,10 @@ const client = new Client({
 
 Sern.init({ client, commands: "dist/commands/prefixed", defaultPrefix: "^" });
 
+client.on("messageUpdate", (old, _new) => {
+  if (old.content === _new.content) return;
+  // @ts-ignore
+  old.client.emit("messageCreate", _new);
+});
+
 client.login(process.env.TOKEN);
