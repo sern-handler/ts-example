@@ -6,7 +6,7 @@ import { editOrReply } from "../../tools/util";
 export default BaseSlashCommand(
   [publish(["941002690211766332"])],
   {
-    name: "ban",
+    name: "test",
     options: [
       {
         name: "user",
