@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "@sern/cli": "^0.1.0"
+    "@sern/cli": "^0.1.0",
+    "ts-results": "^3.3.0"
   },
   "dependencies": {
     "@sern/handler": "^1.0.1-beta",

@@ -1,8 +1,8 @@
-import { basecommand } from "../../tools/basecommand/text";
+import { BaseCommand } from "../../tools/basecommand/text";
 import { Parameters } from "../../tools/parameters";
 import { editOrReply } from "../../tools/util";
 
-export default basecommand(
+export default BaseCommand(
   [],
   {
     name: "user",
@@ -10,9 +10,9 @@ export default basecommand(
   async (context, [_user]) => {
     const user = await Parameters.user(_user, context);
     if (!user) {
-      editOrReply(context, "not found");
+      editOrReply(context.message, "not found");
       return;
     }
-    editOrReply(context, user.tag || "w");
+    editOrReply(context.message, user.tag || "w");
   }
 );

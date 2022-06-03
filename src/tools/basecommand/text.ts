@@ -11,7 +11,7 @@ export interface BaseCommandOptions
   extends Partial<Omit<ModuleNoPlugins[CommandType.Text], "execute">> {
   name: string;
 }
-export function basecommand(
+export function BaseCommand(
   plugins: Array<
     CommandPlugin<CommandType.Text> | EventPlugin<CommandType.Text>
   >,
