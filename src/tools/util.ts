@@ -12,6 +12,7 @@ export const defaultResponseOptions: MessageOptions & MessageEditOptions = {
   components: [],
   content: "",
   embeds: [],
+  allowedMentions: {},
 };
 
 export type EditOrReply = string | (MessageOptions & MessageEditOptions);
@@ -38,8 +39,6 @@ export async function editOrReply(
   if (typeof options === "string") {
     options = { content: options };
   }
-
-  options = Object.assign({ allowedMentions: {} }, options);
 
   let reply: Message | null = null;
 
